@@ -13,7 +13,7 @@ export default function App() {
   const [modalTitle, setModalTitle] = useState('Workshop Registration');
 
   // Master Google Form URL
-  const MASTER_REGISTRATION_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_MASTER_FORM_ID_HERE/viewform?embedded=true";
+  const MASTER_REGISTRATION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScg7u6I2rGa60cEIyQ3oPEkL1e1_0RchA4CeFWfhsslyP2y1Q/viewform?embedded=true";
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
