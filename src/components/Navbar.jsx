@@ -17,7 +17,7 @@ export default function Navbar({ theme, toggleTheme }) {
         </button>
 
         <Link to="/" className="flex flex-col items-center text-center">
-        <img src={logo} alt="RACE Club Logo" className="h-10 w-auto object-contain" />
+        <img src={racelogo} alt="RACE Club Logo" className="h-10 w-auto object-contain" />
         {/* ... */}
         </Link> 
 
