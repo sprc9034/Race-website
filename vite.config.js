@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/race-club-website/',
+  base: '/Race-website/',
 })
