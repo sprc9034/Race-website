@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-race-dark: #1C2126;
+  --color-race-darker: #15191C;
+  --color-race-red: #FF3131;
+  --color-race-cyan: #00E5FF;
+  --color-race-silver: #E0E6ED;
+  --color-race-border: #2C353D;
+}
+
+/* Light Mode Overrides */
+.light {
+  --color-race-dark: #F1F5F9;
+  --color-race-darker: #FFFFFF;
+  --color-race-silver: #0F172A;
+  --color-race-border: #E2E8F0;
+}
