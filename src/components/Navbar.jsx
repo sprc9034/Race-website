@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/racelogo.png'; // <--- Import logo
 
 export default function Navbar({ theme, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +17,11 @@ export default function Navbar({ theme, toggleTheme }) {
         </button>
 
         <Link to="/" className="flex flex-col items-center text-center">
-          {/* Use imported logo variable */}
-          <img src={logo} alt="RACE Club Logo" className="h-10 w-auto object-contain" />
+          <img 
+            src={`${import.meta.env.BASE_URL}racelogo.png`} 
+            alt="RACE Club Logo" 
+            className="h-10 w-auto object-contain" 
+          />
           <span className="text-[12px] text-slate-400 font-medium tracking-wide uppercase hidden sm:inline">
             Robotics • Automation • Coding • Engineers
           </span>
