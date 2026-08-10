@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // <--- Change to HashRouter
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,26 +7,10 @@ import WorkshopsPage from './pages/WorkshopsPage';
 import ProjectsPage from './pages/ProjectsPage';
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeFormUrl, setActiveFormUrl] = useState('');
-  const [modalTitle, setModalTitle] = useState('Workshop Registration');
-
-  // YOUR PERMANENT REUSABLE GOOGLE FORM URL HERE:
-  const MASTER_REGISTRATION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScg7u6I2rGa60cEIyQ3oPEkL1e1_0RchA4CeFWfhsslyP2y1Q/viewform?embedded=true";
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
-  };
-
-  const handleOpenForm = (formUrl, title = "Workshop Registration") => {
-    setActiveFormUrl(formUrl || MASTER_REGISTRATION_FORM_URL);
-    setModalTitle(title);
-    setIsModalOpen(true);
-  };
+  // ... keep existing state and handleOpenForm code ...
 
   return (
-    <BrowserRouter>
+    <Router>
       <div className={`${theme} min-h-screen bg-race-darker text-race-silver font-sans transition-colors duration-300 flex flex-col justify-between`}>
         <div>
           <Navbar theme={theme} toggleTheme={toggleTheme} />
